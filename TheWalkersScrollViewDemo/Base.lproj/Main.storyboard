@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TheWalkersScrollViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shelf" translatesAutoresizingMaskIntoConstraints="NO" id="jU3-PL-kjd">
+                                <rect key="frame" x="0.0" y="527" width="600" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="4Ym-4p-5ea"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="dKt-jd-jRS">
+                                <rect key="frame" x="145" y="20" width="309" height="149"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="309" id="M1j-s3-G6s"/>
+                                    <constraint firstAttribute="height" constant="149" id="YPB-AG-8QV"/>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lao-eZ-9yd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="daryl" translatesAutoresizingMaskIntoConstraints="NO" id="7A1-mu-31u">
+                                        <rect key="frame" x="180" y="203" width="240" height="397"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dKt-jd-jRS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="GHV-HW-8dW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jU3-PL-kjd" secondAttribute="bottom" constant="8" symbolic="YES" id="NWa-h1-ls0"/>
+                            <constraint firstItem="dKt-jd-jRS" firstAttribute="centerX" secondItem="jU3-PL-kjd" secondAttribute="centerX" id="PkY-rp-pg7"/>
+                            <constraint firstItem="lao-eZ-9yd" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="aIx-bF-aCr"/>
+                            <constraint firstItem="dKt-jd-jRS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="een-zq-D8v"/>
+                            <constraint firstItem="jU3-PL-kjd" firstAttribute="leading" secondItem="lao-eZ-9yd" secondAttribute="leading" id="fJa-of-Ahm"/>
+                            <constraint firstItem="jU3-PL-kjd" firstAttribute="trailing" secondItem="lao-eZ-9yd" secondAttribute="trailing" id="lel-ue-ItC"/>
+                            <constraint firstItem="lao-eZ-9yd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rEH-TG-lFO"/>
+                            <constraint firstItem="lao-eZ-9yd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rJ1-6n-UUP"/>
+                            <constraint firstAttribute="trailing" secondItem="lao-eZ-9yd" secondAttribute="trailing" id="t2z-73-pCi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollview" destination="lao-eZ-9yd" id="mkY-H7-58K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="daryl" width="368" height="610"/>
+        <image name="logo" width="732" height="340"/>
+        <image name="shelf" width="865" height="114"/>
+    </resources>
+</document>
